@@ -83,6 +83,7 @@ export default function App() {
                   modificarCantidad={modificarCantidad} 
                   eliminarDelCarrito={eliminarDelCarrito} 
                   totalPrecio={totalPrecio}
+                  totalProductos={totalProductos}
                   vaciarCarrito={vaciarCarrito}
                 />
               } 

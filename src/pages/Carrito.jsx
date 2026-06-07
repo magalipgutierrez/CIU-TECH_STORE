@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import CarritoItem from '../components/CarritoItem';
 
-export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito, totalPrecio }) {
+export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito, totalPrecio, totalProductos }) {
   const carritoVacio = carrito.length === 0;
 
   return (
@@ -35,9 +35,15 @@ export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito
           {/* Caja de Resumen de Totales */}
           <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-6 shadow-sm">
             <h3 className="text-base font-bold text-slate-800 border-b border-slate-100 pb-3">Resumen de Compra</h3>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-slate-500">Total Neto:</span>
-              <span className="text-xl font-black text-emerald-600">${totalPrecio.toLocaleString('es-AR')}</span>
+            <div className="space-y-2 text-sm text-slate-600">
+              <div className="flex justify-between items-center">
+                <span>Cantidad total de productos</span>
+                <span className="font-bold text-slate-800">{totalProductos}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>Total Neto</span>
+                <span className="text-xl font-black text-emerald-600">${totalPrecio.toLocaleString('es-AR')}</span>
+              </div>
             </div>
             
             <Link 

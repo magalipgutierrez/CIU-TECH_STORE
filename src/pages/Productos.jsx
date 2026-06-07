@@ -5,12 +5,21 @@ import { productos } from '../data/productos';
 export default function Productos({ onAgregar }) {
   const [busqueda, setBusqueda] = useState('');
   const [categoriaSel, setCategoriaSel] = useState('Todas');
+  const [soloStock, setSoloStock] = useState(false);
+  const [orden, setOrden] = useState('relevancia');
 
-  const productosFiltrados = productos.filter((prod) => {
-    const coincideTexto = prod.nombre.toLowerCase().includes(busqueda.toLowerCase());
-    const coincideCat = categoriaSel === 'Todas' || prod.categoria === categoriaSel;
-    return coincideTexto && coincideCat;
-  });
+  const productosFiltrados = productos
+    .filter((prod) => {
+      const coincideTexto = prod.nombre.toLowerCase().includes(busqueda.toLowerCase());
+      const coincideCat = categoriaSel === 'Todas' || prod.categoria === categoriaSel;
+      const coincideStock = !soloStock || prod.stock > 0;
+      return coincideTexto && coincideCat && coincideStock;
+    })
+    .sort((a, b) => {
+      if (orden === 'menor') return a.precio - b.precio;
+      if (orden === 'mayor') return b.precio - a.precio;
+      return a.id - b.id;
+    });
 
   return (
     <div className="space-y-8">
@@ -35,10 +44,31 @@ export default function Productos({ onAgregar }) {
           className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-slate-800 focus:outline-none focus:border-teal-500 transition-colors"
         >
           <option value="Todas">Todas las categorías</option>
+          <option value="Auriculares">Auriculares</option>
           <option value="Componentes">Componentes</option>
           <option value="Notebooks">Notebooks</option>
           <option value="Perifericos">Periféricos</option>
         </select>
+
+        <select
+          value={orden}
+          onChange={(e) => setOrden(e.target.value)}
+          className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-slate-800 focus:outline-none focus:border-teal-500 transition-colors"
+        >
+          <option value="relevancia">Orden: por defecto</option>
+          <option value="menor">Precio: menor a mayor</option>
+          <option value="mayor">Precio: mayor a menor</option>
+        </select>
+
+        <label className="flex items-center gap-2 text-sm text-slate-600 bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={soloStock}
+            onChange={(e) => setSoloStock(e.target.checked)}
+            className="h-4 w-4 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+          />
+          Solo con stock disponible
+        </label>
       </div>
 
       {/* Grilla Responsive de Componentes */}

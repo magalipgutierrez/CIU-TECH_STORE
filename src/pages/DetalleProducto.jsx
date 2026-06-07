@@ -46,7 +46,7 @@ export default function DetalleProducto({ onAgregar }) {
             <div className="pt-2 flex items-baseline space-x-4">
               <span className="text-3xl font-black text-emerald-600">${producto.precio.toLocaleString('es-AR')}</span>
               <span className={`text-xs font-semibold ${sinStock ? 'text-red-500' : 'text-slate-500'}`}>
-                {sinStock ? '❌ Sin unidades' : `✔️ Stock disponible: ${producto.stock} uds`}
+                {sinStock ? '❌ Sin unidades' : `✔️ Stock disponible: ${producto.stock} unidades`}
               </span>
             </div>
           </div>
