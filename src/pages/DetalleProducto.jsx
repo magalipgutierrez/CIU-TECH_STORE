@@ -27,7 +27,7 @@ export default function DetalleProducto({ onAgregar }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-slate-900 p-6 rounded-2xl border border-slate-800">
         {/* Contenedor Izquierdo: Imagen Ampliada */}
         <div className="w-full h-80 md:h-96 rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center p-4 relative border border-slate-850">
-          <img src={producto.imagen} alt={producto.nombre} className={`w-full h-full object-cover rounded-lg ${sinStock ? 'opacity-30 grayscale' : ''}`} />
+          <img src={producto.imagen} alt={producto.nombre} className={`w-full h-full object-contain rounded-lg ${sinStock ? 'opacity-30 grayscale' : ''}`} />
           {sinStock && (
             <span className="absolute bg-red-600 text-white font-black text-xs px-3 py-1.5 rounded-md uppercase tracking-wider shadow-md">
               Agotado Temporalmente

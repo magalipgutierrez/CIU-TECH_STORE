@@ -15,7 +15,7 @@ export default function ProductoCard({ producto, onAgregar }) {
         {/* Contenedor de Imagen */}
         <div className="w-full h-44 overflow-hidden rounded-lg my-3 bg-slate-950 flex items-center justify-center relative">
           <img 
-            className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${sinStock ? 'opacity-40 grayscale' : ''}`} 
+            className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 ${sinStock ? 'opacity-40 grayscale' : ''}`} 
             src={imagen} 
             alt={nombre} 
           />

@@ -1,11 +1,14 @@
+import imagenAuriculares from '../assets/aureiculares sony2.webp';
+import compu1 from '../assets/compu sony.webp';
+
 export const productos = [
   {
     id: 1,
-    nombre: "Procesador AMD Ryzen 7 5700X",
-    categoria: "Componentes",
+    nombre: "Auriculares Inalámbricos Sony",
+    categoria: "Auriculares",
     precio: 245000,
-    imagen: "https://images.unsplash.com/photo-1591488320449-011701bb6704?q=80&w=500",
-    descripcion: "8 núcleos y 16 hilos de pura potencia para gaming y productividad. Socket AM4.",
+    imagen: imagenAuriculares,
+    descripcion: "Auriculares con cancelación de ruido...",
     stock: 5
   },
   {
@@ -13,7 +16,7 @@ export const productos = [
     nombre: "Notebook ASUS TUF Gaming F15",
     categoria: "Notebooks",
     precio: 1350000,
-    imagen: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=500",
+    imagen: compu1,
     descripcion: "Intel Core i5, 16GB RAM, 512GB SSD, RTX 3050. Pantalla de 144Hz ideal para competir.",
     stock: 3
   },
