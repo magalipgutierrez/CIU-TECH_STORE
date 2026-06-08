@@ -4,9 +4,9 @@ export default function Navbar({ totalProductos }) {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 text-slate-800 px-4 py-4 shadow-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Identidad / Logo de la Tienda */}
+        {/*  Logo  */}
         <Link to="/" className="text-xl font-black tracking-wider bg-gradient-to-r from-teal-600 to-emerald-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-          ⚡ TECH_STORE
+          ⚡ UNAH-TECH
         </Link>
 
         {/* Enlaces de Navegación */}

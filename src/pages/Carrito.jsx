@@ -8,7 +8,7 @@ export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito
     <div className="space-y-8 py-4">
       <div>
         <h1 className="text-3xl font-extrabold text-slate-800 tracking-tight">Tu Carrito de Compras</h1>
-        <p className="text-sm text-slate-500 mt-1">Revisá los componentes agregados antes de proceder al checkout.</p>
+        <p className="text-sm text-slate-500 mt-1">Revisá los componentes agregados antes de proceder al pago.</p>
       </div>
 
       {carritoVacio ? (
@@ -50,7 +50,7 @@ export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito
               to="/contacto" 
               className="block text-center w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm py-3.5 rounded-xl transition-colors shadow-sm"
             >
-              Continuar al Checkout 💳
+              Continuar con el Checkout 💳
             </Link>
           </div>
         </div>

@@ -20,7 +20,7 @@ export default function App() {
     localStorage.setItem('carrito_unahur', JSON.stringify(carrito));
   }, [carrito]);
 
-  // Lógica: Agregar controlando Stock estricto
+  // Lógica: Agregar controlando Stock y evitando duplicados
   const agregarAlCarrito = (producto) => {
     setCarrito((itemPrevio) => {
       const encontrado = itemPrevio.find((item) => item.id === producto.id);
@@ -37,7 +37,7 @@ export default function App() {
     });
   };
 
-  // Lógica: Modificar cantidad (+1 o -1) de manera controlada
+  // Lógica: Modificar cantidad (+1 o -1) 
   const modificarCantidad = (id, tipo) => {
     setCarrito((itemPrevio) =>
       itemPrevio.map((item) => {

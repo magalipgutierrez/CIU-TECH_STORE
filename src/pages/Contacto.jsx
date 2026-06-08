@@ -58,7 +58,7 @@ export default function Contacto({ carritoVacio, vaciarCarrito }) {
           />
         </div>
 
-        {/* Correo Electrónico */}
+        {/* mail */}
         <div className="space-y-1.5">
           <label className="text-xs font-bold text-slate-600 uppercase tracking-wide">Email Corporativo / Personal *</label>
           <input 

@@ -5,22 +5,22 @@ export default function ProductoCard({ producto, onAgregar }) {
   const { id, nombre, precio, imagenes, stock, categoria } = producto;
   const sinStock = stock === 0;
 
-  // 1. EL ESTADO: Memoria para saber qué foto estamos viendo (arranca en la 0)
+  // ESTADO: Memoria para saber qué foto estamos viendo (arranca en la 0)
   const [imagenActiva, setImagenActiva] = useState(0);
 
-  // Por si te olvidaste de actualizar algún producto al nuevo formato de array
+  //actualizar algún producto al nuevo formato de array
   const listaImagenes = imagenes || []; 
 
-  // 2. LAS FUNCIONES: Para mover el carrusel
+  // Para mover el carrusel
   const siguienteImagen = (e) => {
-    e.preventDefault(); // Evita que se disparen otros clics sin querer
-    // Si llegamos a la última foto, volvemos a la primera (0)
+    e.preventDefault(); // Evita que se disparen otros clic sin querer
+    // Si llegamos a la última foto-> volvemos a la primera (0)
     setImagenActiva((prev) => (prev === listaImagenes.length - 1 ? 0 : prev + 1));
   };
 
   const anteriorImagen = (e) => {
     e.preventDefault();
-    // Si estamos en la primera foto, vamos a la última
+    // Si estamos en la primera foto-> vamos a la última
     setImagenActiva((prev) => (prev === 0 ? listaImagenes.length - 1 : prev - 1));
   };
 
@@ -31,7 +31,7 @@ export default function ProductoCard({ producto, onAgregar }) {
           {categoria}
         </span>
         
-        {/* CONTENEDOR DE IMAGEN Y CARRUSEL */}
+        {/* CONTENEDOR DE CARRUSEL */}
         <div className="w-full h-44 overflow-hidden rounded-lg my-3 bg-slate-50 flex items-center justify-center relative group/img">
           <img 
             className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 ${sinStock ? 'opacity-40 grayscale' : ''}`} 
@@ -45,14 +45,14 @@ export default function ProductoCard({ producto, onAgregar }) {
             </span>
           )}
 
-          {/* FLECHITAS (Solo aparecen si hay más de 1 imagen y hacemos hover) */}
+          {/* FLECHITAS*/}
           {listaImagenes.length > 1 && (
             <>
               <button 
                 onClick={anteriorImagen}
                 className="absolute left-1 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-1.5 rounded-full shadow-md opacity-0 group-hover/img:opacity-100 transition-opacity"
               >
-                {/* Ícono de flecha izquierda */}
+                
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
@@ -108,7 +108,7 @@ export default function ProductoCard({ producto, onAgregar }) {
               : 'bg-teal-500 hover:bg-teal-600 text-white shadow-sm active:scale-[0.98]'
           }`}
         >
-          {sinStock ? 'No disponible' : ' Agregar al carrito 🛒'}
+          {sinStock ? 'No disponible' : ' 🛒 Agregar al carrito '}
         </button>
       </div>
     </div>
