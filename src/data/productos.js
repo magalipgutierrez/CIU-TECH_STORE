@@ -79,7 +79,7 @@ export const productos = [
   {
     id: 7,
     nombre: "Audífonos Inalámbricos Xiaom",
-    categoria: "Perifericos",
+    categoria: "Auriculares",
     precio: 25000,
     imagenes: [auri1, auri2],
     descripcion: "La duración máxima de la batería es 1.5 días. Con micrófono incorporado. Asistente de voz integrado: Xiaomi",
