@@ -89,7 +89,7 @@ export const productos = [
     id: 8,
     nombre: "Memoria RAM Corsair Vengeance 16GB",
     categoria: "Componentes",
-    precio: 123.580,
+    precio: 209999,
     imagenes: [memoriaRAM],
     descripcion: "Capacidad total de 8 GB para multitasking eficiente. Velocidad 2.4 GHz para procesamiento super rápido.",
     stock: 15

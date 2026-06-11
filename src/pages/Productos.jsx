@@ -55,7 +55,7 @@ export default function Productos({ onAgregar }) {
           onChange={(e) => setOrden(e.target.value)}
           className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 text-slate-800 focus:outline-none focus:border-teal-500 transition-colors"
         >
-          <option value="relevancia">Orden: por defecto</option>
+          <option value="relevancia">Mas relevantes</option>
           <option value="menor">Precio: menor a mayor</option>
           <option value="mayor">Precio: mayor a menor</option>
         </select>

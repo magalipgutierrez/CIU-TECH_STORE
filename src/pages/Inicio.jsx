@@ -21,7 +21,7 @@ export default function Inicio() {
               to="/productos" 
               className="inline-block bg-teal-500 hover:bg-teal-600 text-white font-extrabold px-8 py-3.5 rounded-xl transition-all shadow-sm active:scale-[0.98]"
             >
-              Ver Catálogo Completo 🚀
+              Ver Catálogo Completo
             </Link>
           </div>
         </div>
