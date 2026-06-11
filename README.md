@@ -39,7 +39,11 @@ src/
 └── App.jsx            # Enrutado y lógica del carrito
 
 ## 👥 Integrantes del grupo
-Completar con los nombres de los integrantes antes de la entrega final.
+Luis Sebastián Alderete Cuello
+Magalí Gutierrez
+Martín Marcelo Maldonado
+Felipe Agustin Lopez Acosta
+Ary Diego Albarracin 
 
 ## 🌐 Deploy
 Sin deploy publicado aún. Si se realiza, agregar el enlace correspondiente aquí.
