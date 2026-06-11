@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Inicio from './pages/Inicio';
@@ -73,7 +73,7 @@ export default function App() {
   const totalPrecio = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="flex flex-col min-h-screen bg-slate-50 text-slate-800 selection:bg-teal-200 selection:text-teal-900">
         <Navbar totalProductos={totalProductos} />
         
@@ -101,6 +101,6 @@ export default function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
