@@ -1,4 +1,4 @@
-# ⚡ UNAH-TECH - Tienda Online de Hardware Premium
+# ⚡ TECH-Store - Tienda Online de Hardware Premium
 
 ## 📝 Descripción breve
 TECH_STORE es una aplicación web SPA(Single Page Application) desarrollada en React para simular una tienda online de hardware y periféricos. Permite explorar el catálogo, ver el detalle de cada producto, agregar artículos al carrito, controlar el stock y completar una compra simulada mediante un formulario controlado.
@@ -49,7 +49,7 @@ Equipo de desarrollo del proyecto TECH_STORE:
 - Ary Diego Albarracín
 
 ## 🌐 Deploy
-Sin deploy publicado aún. Si se realiza, agregar el enlace correspondiente aquí.
+Sin deploy publicado aún.
 
 ## 📌 Nota para la entrega
 La aplicación fue validada con el comando:
