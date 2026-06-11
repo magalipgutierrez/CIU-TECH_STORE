@@ -11,9 +11,16 @@ import Contacto from './pages/Contacto';
 export default function App() {
   // Inicializamos el estado desde localStorage o array vacío
   const [carrito, setCarrito] = useState(() => {
+  try {
     const guardado = localStorage.getItem('carrito_unahur');
+    // Si hay algo guardado, intenta parsearlo. Si no, devuelve un arreglo vacío.
     return guardado ? JSON.parse(guardado) : [];
-  });
+  } catch (error) {
+    // Si JSON.parse falla (por datos corruptos), capturamos el error y evitamos la pantalla en blanco.
+    console.error("Error al leer el carrito:", error);
+    return []; 
+  }
+});
 
   // Efecto para persistir cambios en el carrito automáticamente
   useEffect(() => {
