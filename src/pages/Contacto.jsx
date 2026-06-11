@@ -120,7 +120,7 @@ export default function Contacto({ carritoVacio, vaciarCarrito }) {
               : 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-sm active:scale-[0.98]'
           }`}
         >
-          {carritoVacio ? 'Carrito vacío - No se puede comprar' : 'Confirmar Orden de Compra 🚀'}
+          {carritoVacio ? 'Carrito vacío - No se puede comprar' : 'Confirmar Orden de Compra '}
         </button>
       </form>
     </div>

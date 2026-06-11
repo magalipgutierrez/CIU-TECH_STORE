@@ -15,7 +15,7 @@ export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito
         <div className="text-center py-16 bg-slate-50 rounded-2xl border border-dashed border-slate-300 space-y-4">
           <p className="text-slate-500 text-sm font-medium">El carrito se encuentra actualmente vacío.</p>
           <Link to="/productos" className="inline-block bg-teal-600 hover:bg-teal-700 border border-teal-700 text-xs font-bold text-white px-6 py-2.5 rounded-xl transition-colors shadow-sm">
-            Explorar Catálogo 🚀
+            Explorar Catálogo 
           </Link>
         </div>
       ) : (
@@ -50,7 +50,7 @@ export default function Carrito({ carrito, modificarCantidad, eliminarDelCarrito
               to="/contacto" 
               className="block text-center w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm py-3.5 rounded-xl transition-colors shadow-sm"
             >
-              Continuar con el Checkout 💳
+              Continuar con la compra
             </Link>
           </div>
         </div>

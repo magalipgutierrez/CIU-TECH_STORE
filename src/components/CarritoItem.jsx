@@ -2,7 +2,7 @@ export default function CarritoItem({ item, modificarCantidad, eliminarDelCarrit
   return (
     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white border border-slate-200 p-4 rounded-xl shadow-sm">
       <div className="flex items-center gap-4 w-full sm:w-auto">
-        <img src={item.imagen} alt={item.nombre} className="w-16 h-16 object-cover rounded-lg bg-slate-50 flex-shrink-0" />
+        <img src={item.imagenes[0]} alt={item.nombre} className="w-16 h-16 object-contain rounded-lg bg-slate-50 flex-shrink-0" />
         <div>
           <h4 className="text-sm font-bold text-slate-800 line-clamp-1">{item.nombre}</h4>
           <p className="text-xs text-slate-500">Precio Unitario: ${item.precio.toLocaleString('es-AR')}</p>
