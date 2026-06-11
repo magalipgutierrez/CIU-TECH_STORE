@@ -39,11 +39,14 @@ src/
 └── App.jsx            # Enrutado y lógica del carrito
 
 ## 👥 Integrantes del grupo
-Luis Sebastián Alderete Cuello
-Magalí Gutierrez
-Martín Marcelo Maldonado
-Felipe Agustin Lopez Acosta
-Ary Diego Albarracin 
+
+Equipo de desarrollo del proyecto TECH_STORE:
+
+- Luis Sebastián Alderete Cuello
+- Magalí Gutiérrez
+- Martín Marcelo Maldonado
+- Felipe Agustín López Acosta
+- Ary Diego Albarracín
 
 ## 🌐 Deploy
 Sin deploy publicado aún. Si se realiza, agregar el enlace correspondiente aquí.
